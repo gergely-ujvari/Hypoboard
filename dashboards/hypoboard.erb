@@ -1,20 +1,42 @@
 <% content_for :title do %>Hypothes.is dashboard<% end %>
-<div style="background-color:#ffffff;">
+<div>
   <div class="gridster">
     <ul>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div data-view="Image" data-image="/hypo_logo.png"
-             style="background-color:#ffffff;"></div>
+        <div data-view="Image" data-image="/hypo_logo.png"></div>
       </li>
 
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        <div style="background-color:#96bf48;"
-           data-id="numberOfAnnotations"
+      <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+        <div data-view="Clock"></div>
+        <i class="icon-time icon-background"></i>
+      </li>
+
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+        <div
+           data-id="totalNumberOfAnnotations"
            data-view="Number"
            data-title="Total Annotations"
            data-moreinfo=""
            data-prefix=""></div>
       </li>
+
+      <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+        <div
+           data-id="dailylNumberOfNewAnnotations"
+           data-view="Number"
+           data-title="Annotations created Today"
+           data-moreinfo=""
+           data-prefix=""></div>
+      </li>
+
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="2">
+      <div  data-id="dailyTopURIs"
+            data-view="List"
+            data-unordered="true"
+            data-title="Top ten URIs"
+            data-moreinfo="# of uris annotated this day"></div>
+    </li>
+
     </ul>
   </div>
 </div>
